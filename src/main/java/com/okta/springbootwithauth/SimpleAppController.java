@@ -10,5 +10,10 @@ class SimpleAppController {
     String home() {
         return "home";
     }
+    
+    @RequestMapping("/restricted")
+    String restricted() {
+        return "restricted";
+    }
 
 }
