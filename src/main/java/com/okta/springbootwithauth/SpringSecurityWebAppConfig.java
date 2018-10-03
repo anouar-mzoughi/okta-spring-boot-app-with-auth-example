@@ -10,6 +10,7 @@ import org.springframework.security.config.core.GrantedAuthorityDefaults;
 
 @EnableOAuth2Sso
 @Configuration
+@EnableGlobalMethodSecurity(prePostEnabled = true)
 public class SpringSecurityWebAppConfig extends WebSecurityConfigurerAdapter {
 
     @Bean
