@@ -6,6 +6,13 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 class SimpleAppController {
+
+    final AdminService adminService;
+
+    @Autowired
+    SimpleAppController(AdminService adminService) {
+        this.adminService = adminService;
+    }
     
     @RequestMapping("/")
     String home() {
@@ -16,9 +23,6 @@ class SimpleAppController {
     String restricted() {
         return "restricted";
     }
-
-    @Autowired
-    AdminService adminService;
 
     @RequestMapping("/admin")
     String admin() {
